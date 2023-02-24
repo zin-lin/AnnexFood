@@ -28,34 +28,34 @@ var xox = [
     {id: 12, data: {title:"Hello Food 11", ingredient: "Hello Food, food, x"}},
 ]
 
-// const load = ()=> {
-//     db.collection("recipe").onSnapshot((sn) => {
-//         //  console.log(sn.docChanges());
-//
-//         sn.docChanges().forEach(ch => {
-//             // console.log(ch, ch.doc.data(), ch.doc.id);
-//             //In Dart documentId here id
-//             //data is the same
-//
-//             if (ch.type === "added") {
-//                 //add the document data to index.html
-//                 renderRecipe(ch.doc.data(), ch.doc.id)
-//             }
-//
-//             if (ch.type === "removed") {
-//                 //remove the document data to index.html
-//
-//                 removeRecipe(ch.doc.id);
-//             }
-//         });
-//     });
-// }
+const load = ()=> {
+    db.collection("recipe").onSnapshot((sn) => {
+        //  console.log(sn.docChanges());
+        alert("Hello There")
+        sn.docChanges().forEach(ch => {
+            // console.log(ch, ch.doc.data(), ch.doc.id);
+            //In Dart documentId here id
+            //data is the same
 
-var load = ()=>{
-    xox.forEach(ch=>{
-        renderRecipe(ch.data, ch.id);
-    })
+            if (ch.type === "added") {
+                //add the document data to index.html
+                renderRecipe(ch.doc.data(), ch.doc.id)
+            }
+
+            if (ch.type === "removed") {
+                //remove the document data to index.html
+
+                removeRecipe(ch.doc.id);
+            }
+        });
+    });
 }
+
+// var load = ()=>{
+//     xox.forEach(ch=>{
+//         renderRecipe(ch.data, ch.id);
+//     })
+// }
 
 load();
 
