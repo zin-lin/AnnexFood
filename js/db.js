@@ -28,10 +28,11 @@ var xox = [
     {id: 12, data: {title:"Hello Food 11", ingredient: "Hello Food, food, x"}},
 ]
 
+
+alert("Hello There");
 const load = ()=> {
     db.collection("recipe").onSnapshot((sn) => {
         //  console.log(sn.docChanges());
-        alert("Hello There");
         sn.docChanges().forEach(ch => {
             // console.log(ch, ch.doc.data(), ch.doc.id);
             //In Dart documentId here id
@@ -59,6 +60,7 @@ const load = ()=> {
 
 load();
 
+alert("Hello There 2");
 // give names to element
 const alertbox = document.getElementById("box1");
 const alert01 = document.getElementById("alert1");
