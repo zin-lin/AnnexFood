@@ -31,7 +31,7 @@ var xox = [
 const load = ()=> {
     db.collection("recipe").onSnapshot((sn) => {
         //  console.log(sn.docChanges());
-        alert("Hello There")
+        alert("Hello There");
         sn.docChanges().forEach(ch => {
             // console.log(ch, ch.doc.data(), ch.doc.id);
             //In Dart documentId here id
