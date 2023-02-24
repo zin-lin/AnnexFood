@@ -1,18 +1,22 @@
 //Firestore.instance.collection("recipe") - Dart
 
-// db.enablePersistence().catch(
-//     err=>{
-//         if (err.code == "failed-precondition"){
-//             console.log("Persistance Falied...");
-//         }
-//
-//         else if (err.code == "unimplemented"){
-//             console.log("persistence is not available in this browser...")
-//         }
-//     }
-// );//errors might occurs
+
+try {
+    db.enablePersistence().catch(
+        err => {
+            if (err.code == "failed-precondition") {
+                console.log("Persistance Falied...");
+            } else if (err.code == "unimplemented") {
+                console.log("persistence is not available in this browser...")
+            }
+        }
+    );//errors might occurs
 
 //demo
+}
+catch (e){
+    console.log("Error Occurred, Apple Error");
+}
 var xox = [
     {id: 1, data: {title:"Hello Food", ingredient: "Hello Food, food, x"}},
     {id: 2, data: {title:"Hello Food 1", ingredient: "Hello Food, food, x"}},
