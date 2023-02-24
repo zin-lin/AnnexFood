@@ -1,22 +1,7 @@
 //Firestore.instance.collection("recipe") - Dart
 
 
-try {
-    db.enablePersistence().catch(
-        err => {
-            if (err.code == "failed-precondition") {
-                console.log("Persistance Falied...");
-            } else if (err.code == "unimplemented") {
-                console.log("persistence is not available in this browser...")
-            }
-        }
-    );//errors might occurs
 
-//demo
-}
-catch (e){
-    console.log("Error Occurred, Apple Error");
-}
 var xox = [
     {id: 1, data: {title:"Hello Food", ingredient: "Hello Food, food, x"}},
     {id: 2, data: {title:"Hello Food 1", ingredient: "Hello Food, food, x"}},
@@ -144,5 +129,19 @@ recipeContainer.addEventListener("click", eve=>{
 catch (e){
 
 }
+
+firebase.firestore().enablePersistence()
+    .catch((err) => {
+        if (err.code == 'failed-precondition') {
+            // Multiple tabs open, persistence can only be enabled
+            // in one tab at a a time.
+            // ...
+        } else if (err.code == 'unimplemented') {
+            // The current browser does not support all of the
+            // features required to enable persistence
+            // ...
+        }
+    });
+// Subsequent queries will use persistence, if it was enabled successfully
 
 
