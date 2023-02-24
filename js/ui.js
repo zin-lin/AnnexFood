@@ -13,6 +13,7 @@ cou.style.zIndex ="0";
 }
 
 try {
+    recipes.innerHTML=``;
     recipes.style.zIndex = "0";
     recipes.style.transform = "translateY(0%)";
     recipes.style.zIndex = "0";
@@ -22,11 +23,11 @@ try {
 
 document.addEventListener("DOMContentLoaded", function(){
 
-const menus = document.querySelectorAll(".side-menu");
-M.Sidenav.init(menus, {edge: "right"});
+    const menus = document.querySelectorAll(".side-menu");
+    M.Sidenav.init(menus, {edge: "right"});
 
-const forms = document.querySelectorAll(".side-form");
-M.Sidenav.init(forms, {edge: "left"});
+    const forms = document.querySelectorAll(".side-form");
+    M.Sidenav.init(forms, {edge: "left"});
 
 });
 
