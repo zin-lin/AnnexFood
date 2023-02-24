@@ -1,17 +1,5 @@
 //Firestore.instance.collection("recipe") - Dart
 
-// give names to element
-const alertbox = document.getElementById("box1");
-const alert01 = document.getElementById("alert1");
-const nav = document.querySelector("nav");
-// method to kill alertbox
-function alertkill () {
-    alertbox.style.visibility = "hidden";
-    alertbox.style.opacity = 0;
-    nav.style.visibility = "visible"
-}
-alert01.addEventListener("click", evt => alertkill())
-alertbox.addEventListener("click", evt => alertkill())
 db.enablePersistence().catch(
     err=>{
         if (err.code == "failed-precondition"){
@@ -24,39 +12,54 @@ db.enablePersistence().catch(
     }
 );//errors might occurs
 
+//
+// db.collection("recipe").get().then((sn)=>{
+//     sn.forEach((doc)=>{
+//         try{
+//         renderRecipe(doc.data(), doc.id);
+//         }catch (e){
+//
+//         }
+//     })
+// });
 
-db.collection("recipe").get().then((sn)=>{
-    sn.forEach((doc)=>{
-        try{
-        renderRecipe(doc.data(), doc.id);
-        }catch (e){
+const load = ()=> {
+    db.collection("recipe").onSnapshot((sn) => {
+        //  console.log(sn.docChanges());
 
-        }
-    })
-});
+        sn.docChanges().forEach(ch => {
+            // console.log(ch, ch.doc.data(), ch.doc.id);
+            //In Dart documentId here id
+            //data is the same
 
-db.collection("recipe").onSnapshot((sn)=>{
-  //  console.log(sn.docChanges());
+            if (ch.type === "added") {
+                //add the document data to index.html
+                renderRecipe(ch.doc.data(), ch.doc.id)
+            }
 
-  sn.docChanges().forEach(ch => {
-     // console.log(ch, ch.doc.data(), ch.doc.id);
-      //In Dart documentId here id
-      //data is the same
+            if (ch.type === "removed") {
+                //remove the document data to index.html
 
-      if (ch.type === "added"){
-          //add the document data to index.html
-          console.log(ch.doc.data());
-          renderRecipe(ch.doc.data(), ch.doc.id)
-      }
+                removeRecipe(ch.doc.id);
+            }
+        });
+    });
+}
 
-      if (ch.type === "removed"){
-          //remove the document data to index.html
+load();
 
-          removeRecipe(ch.doc.id);
-      }
-  });
-}); 
-
+// give names to element
+const alertbox = document.getElementById("box1");
+const alert01 = document.getElementById("alert1");
+const nav = document.querySelector("nav");
+// method to kill alertbox
+function alertkill () {
+    alertbox.style.visibility = "hidden";
+    alertbox.style.opacity = 0;
+    nav.style.visibility = "visible"
+}
+alert01.addEventListener("click", evt => alertkill())
+alertbox.addEventListener("click", evt => alertkill())
 
 //Add New Document
 const form = document.getElementById("form");
