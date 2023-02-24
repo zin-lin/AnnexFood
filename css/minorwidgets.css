@@ -6,7 +6,7 @@ html{
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-	font-family: lato;
+	font-family: lato, "Segoe UI";
 }
 
 li.navEle{
@@ -573,7 +573,7 @@ border-color: #57a0d3;
 	  }
 
 	  input{
-		font-family: lato;
+		font-family: lato, "sans-serif";
 		width: 80%;
 		font-size: 14px;
 		box-shadow: none !important;
@@ -930,7 +930,7 @@ width:30%;
 
 button {
 	background-color: transparent;
-	font-family: lato;
+	font-family: lato , "sans-serif";
 	font-size: 16px;
 	padding-top: 6;
 	padding-bottom: 6;
@@ -964,7 +964,7 @@ Green X
 button.greenx {
 	font-size: 14px;
 	color: #ffffff;
-	font-family: "Lato Light";
+	font-family: "Lato Light", "sans-serif";
 	background-color: #69e8a4;
 }
 
@@ -984,7 +984,7 @@ Blue X
  */
 button.bluex {
 	font-size: 14px;
-	font-family: "Lato Light";
+	font-family: "Lato Light", "sans-serif";
 	color: #ffffff;
 	background-color: #4680ff;
 }
@@ -1005,7 +1005,7 @@ Red X
 
 button.redx {
 	color: #ffffff;
-	font-family: "Lato Light";
+	font-family: "Lato Light", "sans-serif";
 	font-size: 14px;
 	background-color: #ff4646;
 }
@@ -1026,7 +1026,7 @@ Orange X
 
 button.orangex {
 	color: #ffffff;
-	font-family: "Lato Light";
+	font-family: "Lato Light", "sans-serif";
 	font-size: 14px;
 	background-color: #ff8b4f;
 }
@@ -1047,7 +1047,7 @@ Theme X
  */
 
 button.themex {
-	font-family: "Lato Light";
+	font-family: "Lato Light", "sans-serif";
 	font-size: 14px;
 	color: #ffffff;
 	background-color: #1c4254;
