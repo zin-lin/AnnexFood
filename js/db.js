@@ -72,33 +72,38 @@ form.addEventListener("submit", evt=>{
     }
 });
 
-form1.addEventListener("submit", evt=>{
-    evt.preventDefault();
-    text = form1.titleSide.value;
-    console.log(form1.titleSide.value +" :: "+form1.ingredientsSide.value);
-    if (text.toString().length !== 0) {
-        const recipe = {
-            title: form1.titleSide.value,
-            ingredient: form1.ingredientsSide.value,
-        };
-        db.collection("recipe").add(recipe)
-            .then(() => {
-                console.log("Added")
-            })
-            .catch(err => console.log(err));
-        form1.titleSide.value = "";
-        form1.ingredientsSide.value = "";
-    }
-    else{
-        alertbox.style.visibility = "visible";
-        alertbox.style.opacity = 1;
-    }
+// can be null
+try {
+    form1.addEventListener("submit", evt => {
+        evt.preventDefault();
+        text = form1.titleSide.value;
+        console.log(form1.titleSide.value + " :: " + form1.ingredientsSide.value);
+        if (text.toString().length !== 0) {
+            const recipe = {
+                title: form1.titleSide.value,
+                ingredient: form1.ingredientsSide.value,
+            };
+            db.collection("recipe").add(recipe)
+                .then(() => {
+                    console.log("Added")
+                })
+                .catch(err => console.log(err));
+            form1.titleSide.value = "";
+            form1.ingredientsSide.value = "";
+        } else {
+            alertbox.style.visibility = "visible";
+            alertbox.style.opacity = 1;
+        }
 
-});
+    });
+}catch (err) {}
 
 //Delete a Recipe 
 
 const recipeContainer = document.querySelector(".recipes");
+
+// Could be null
+try{
 recipeContainer.addEventListener("click", eve=>{
     //console.log(eve);
 
@@ -106,6 +111,9 @@ recipeContainer.addEventListener("click", eve=>{
         const id = eve.target.getAttribute("data-id");
         db.collection("recipe").doc(id).delete();
     }
-})
+})}
+catch (e){
+
+}
 
 

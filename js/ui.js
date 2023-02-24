@@ -2,15 +2,24 @@
 
 
 const recipes = document.querySelector(".recipes");
-
 const cou = document.querySelector(".cardMain");
+
+try {
 cou.style.zIndex ="0";
 cou.style.transform = "translateY(0%)";
 cou.style.zIndex ="0";
+}catch (err){
+    // Error occurred
+}
 
-recipes.style.zIndex ="0";
-recipes.style.transform = "translateY(0%)";
-recipes.style.zIndex ="0";
+try {
+    recipes.style.zIndex = "0";
+    recipes.style.transform = "translateY(0%)";
+    recipes.style.zIndex = "0";
+}catch (err){
+    // Error Occurred
+}
+
 document.addEventListener("DOMContentLoaded", function(){
 
 const menus = document.querySelectorAll(".side-menu");
@@ -21,9 +30,13 @@ M.Sidenav.init(forms, {edge: "left"});
 
 });
 
-cou.addEventListener("drag", eve =>{
-    eve.preventDefault();
-})
+try {
+    cou.addEventListener("drag", eve => {
+        eve.preventDefault();
+    })
+}catch (e) {
+    
+}
 
 const renderRecipe = (data, id) =>{
 
@@ -47,8 +60,12 @@ const renderRecipe = (data, id) =>{
 
     console.log();
  
-    recipes.innerHTML += html;
-    //output in the getted material
+    try{
+    recipes.innerHTML += html;}
+    catch (e) {
+        
+    }
+    //output in the material
 }
 
 
