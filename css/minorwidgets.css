@@ -1128,8 +1128,14 @@ div nav-bar bottom
 }
 
 .mobile-nav-item4{
+	text-align: center;
 	background-color: transparent;
 	width: 25%;
+	height: 100%;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	padding-top:45px;
 	transition: 0.4s ease;
 	float: left;
 }
