@@ -12,38 +12,49 @@ db.enablePersistence().catch(
     }
 );//errors might occurs
 
+//demo
+var xox = [
+    {id: 1, data: {title:"Hello Food", ingredient: "Hello Food, food, x"}},
+    {id: 2, data: {title:"Hello Food 1", ingredient: "Hello Food, food, x"}},
+    {id: 3, data: {title:"Hello Food 2", ingredient: "Hello Food, food, x"}},
+    {id: 4, data: {title:"Hello Food 3", ingredient: "Hello Food, food, x"}},
+    {id: 5, data: {title:"Hello Food 4", ingredient: "Hello Food, food, x"}},
+    {id: 6, data: {title:"Hello Food 5", ingredient: "Hello Food, food, x"}},
+    {id: 7, data: {title:"Hello Food 6", ingredient: "Hello Food, food, x"}},
+    {id: 8, data: {title:"Hello Food 7", ingredient: "Hello Food, food, x"}},
+    {id: 9, data: {title:"Hello Food 8", ingredient: "Hello Food, food, x"}},
+    {id: 10, data: {title:"Hello Food 9", ingredient: "Hello Food, food, x"}},
+    {id: 11, data: {title:"Hello Food 10", ingredient: "Hello Food, food, x"}},
+    {id: 12, data: {title:"Hello Food 11", ingredient: "Hello Food, food, x"}},
+]
+
+// const load = ()=> {
+//     db.collection("recipe").onSnapshot((sn) => {
+//         //  console.log(sn.docChanges());
 //
-// db.collection("recipe").get().then((sn)=>{
-//     sn.forEach((doc)=>{
-//         try{
-//         renderRecipe(doc.data(), doc.id);
-//         }catch (e){
+//         sn.docChanges().forEach(ch => {
+//             // console.log(ch, ch.doc.data(), ch.doc.id);
+//             //In Dart documentId here id
+//             //data is the same
 //
-//         }
-//     })
-// });
+//             if (ch.type === "added") {
+//                 //add the document data to index.html
+//                 renderRecipe(ch.doc.data(), ch.doc.id)
+//             }
+//
+//             if (ch.type === "removed") {
+//                 //remove the document data to index.html
+//
+//                 removeRecipe(ch.doc.id);
+//             }
+//         });
+//     });
+// }
 
-const load = ()=> {
-    db.collection("recipe").onSnapshot((sn) => {
-        //  console.log(sn.docChanges());
-
-        sn.docChanges().forEach(ch => {
-            // console.log(ch, ch.doc.data(), ch.doc.id);
-            //In Dart documentId here id
-            //data is the same
-
-            if (ch.type === "added") {
-                //add the document data to index.html
-                renderRecipe(ch.doc.data(), ch.doc.id)
-            }
-
-            if (ch.type === "removed") {
-                //remove the document data to index.html
-
-                removeRecipe(ch.doc.id);
-            }
-        });
-    });
+var load = ()=>{
+    xox.forEach(ch=>{
+        renderRecipe(ch.data, ch.id);
+    })
 }
 
 load();
