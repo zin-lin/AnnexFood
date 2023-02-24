@@ -24,6 +24,17 @@ db.enablePersistence().catch(
     }
 );//errors might occurs
 
+
+db.collection("recipe").get().then((sn)=>{
+    sn.forEach((doc)=>{
+        try{
+        renderRecipe(doc.data(), doc.id);
+        }catch (e){
+
+        }
+    })
+});
+
 db.collection("recipe").onSnapshot((sn)=>{
   //  console.log(sn.docChanges());
 
