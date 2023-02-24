@@ -69,9 +69,7 @@ const renderRecipe = (data, id) =>{
     //output in the material
 }
 
-
-//remove recipe form DOM 
-
+//remove recipe form DOM
 const removeRecipe= (id) =>{
 
     const recipe = document.querySelector(`.recipe[data-id='${id}']`);

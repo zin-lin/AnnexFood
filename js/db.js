@@ -1,16 +1,16 @@
 //Firestore.instance.collection("recipe") - Dart
 
-db.enablePersistence().catch(
-    err=>{
-        if (err.code == "failed-precondition"){
-            console.log("Persistance Falied...");
-        }
-
-        else if (err.code == "unimplemented"){
-            console.log("persistence is not available in this browser...")
-        }
-    }
-);//errors might occurs
+// db.enablePersistence().catch(
+//     err=>{
+//         if (err.code == "failed-precondition"){
+//             console.log("Persistance Falied...");
+//         }
+//
+//         else if (err.code == "unimplemented"){
+//             console.log("persistence is not available in this browser...")
+//         }
+//     }
+// );//errors might occurs
 
 //demo
 var xox = [
@@ -29,7 +29,6 @@ var xox = [
 ]
 
 
-alert("Hello There");
 const load = ()=> {
     db.collection("recipe").onSnapshot((sn) => {
         //  console.log(sn.docChanges());
@@ -60,7 +59,6 @@ const load = ()=> {
 
 load();
 
-alert("Hello There 2");
 // give names to element
 const alertbox = document.getElementById("box1");
 const alert01 = document.getElementById("alert1");
