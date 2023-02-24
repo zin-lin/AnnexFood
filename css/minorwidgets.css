@@ -6,7 +6,7 @@ html{
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-	font-family: lato, "Segoe UI";
+	font-family: lato, sans-serif;
 }
 
 li.navEle{
@@ -132,7 +132,7 @@ vertical-align: middle;
 border-color:#43abcf;
 margin-left: 7px;
 border-style: solid;
-font-family: "Segoe UI";
+font-family: sans-serif;
 font-weight: 160;
 text-align: center;
 z-index: inherit;
@@ -200,7 +200,7 @@ border-color: #d3d3d3;
 
 .pager{
 
-font-family: "Segoe UI";
+font-family: sans-serif;
 color:#3d3d3d;
 font-weight: 200;
 margin: 15;
@@ -244,7 +244,7 @@ color:#3d3d3d;
 vertical-align: middle;
 border-color:#3d3d3d;
 margin-left: 7px;
-font-family: "Segoe UI";
+font-family: sans-serif;
 font-weight: 190;
 text-align: center;
 border-radius:9px;
@@ -264,7 +264,7 @@ color:#808080;
 vertical-align: middle;
 transition: 0.1s;
 margin-left: 7px;
-font-family: "Segoe UI";
+font-family: sans-serif;
 font-weight: 190;
 text-align: center;
 border-radius:9px;
@@ -302,7 +302,7 @@ color:#42abcf;
 vertical-align: middle;
 transition: 0.1s;
 margin-left: 7px;
-font-family: "Segoe UI";
+font-family: sans-serif;
 font-weight: 190;
 text-align: center;
 border-radius:9px;
@@ -344,7 +344,7 @@ border-color: #57a0d3;
 	vertical-align: middle;
 	transition: 0.1s;
 	margin-left: 7px;
-	font-family: "Segoe UI";
+	font-family: sans-serif;
 	font-weight: 190;
 	text-align: center;
 	border-radius:9px;
@@ -382,7 +382,7 @@ border-color: #57a0d3;
 	vertical-align: middle;
 	transition: 0.1s;
 	margin-left: 7px;
-	font-family: "Segoe UI";
+	font-family: sans-serif;
 	font-weight: 190;
 	text-align: center;
 	border-radius:9px;
@@ -421,7 +421,7 @@ border-color: #57a0d3;
 	vertical-align: middle;
 	transition: 0.1s;
 	margin-left: 7px;
-	font-family: "Segoe UI";
+	font-family: sans-serif;
 	font-weight: 190;
 	text-align: center;
 	border-radius:9px;
@@ -458,7 +458,7 @@ border-color: #57a0d3;
 	vertical-align: middle;
 	transition: 0.1s;
 	margin-left: 7px;
-	font-family: "Segoe UI";
+	font-family: sans-serif;
 	font-weight: 190;
 	text-align: center;
 	border-radius:9px;
@@ -517,6 +517,8 @@ border-color: #57a0d3;
 	  .recipes{
 		  margin-top: 9px;
 		  margin-bottom: 20px;
+		  padding: 30px;
+		  padding-top: 10px;
 		  transition: 0.4s ease;
 		  transform: translateY(90%);
 		  position: relative;
@@ -573,7 +575,7 @@ border-color: #57a0d3;
 	  }
 
 	  input{
-		font-family: lato, "Segoe UI";
+		font-family: lato, sans-serif;
 		width: 80%;
 		font-size: 14px;
 		box-shadow: none !important;
@@ -635,7 +637,7 @@ border-color: #57a0d3;
 	vertical-align: middle;
 	transition: 0.1s;
 	margin-left: 7px;
-	font-family: "Segoe UI";
+	font-family: sans-serif;
 	font-weight: 190;
 	text-align: center;
 	border-radius:9px;
@@ -721,7 +723,7 @@ height: 0.2px;
 
 .title{
 
-font-family: "Segoe UI";
+font-family: sans-serif;
 font-style:bold;
 font-weight: 700;
 font-size: 23px;
@@ -930,7 +932,7 @@ width:30%;
 
 button {
 	background-color: transparent;
-	font-family: lato , "Segoe UI";
+	font-family: lato , sans-serif;
 	font-size: 16px;
 	padding-top: 6;
 	padding-bottom: 6;
@@ -964,7 +966,7 @@ Green X
 button.greenx {
 	font-size: 14px;
 	color: #ffffff;
-	font-family: "Lato Light", "Segoe UI";
+	font-family: "Lato Light", sans-serif;
 	background-color: #69e8a4;
 }
 
@@ -984,7 +986,7 @@ Blue X
  */
 button.bluex {
 	font-size: 14px;
-	font-family: "Lato Light", "Segoe UI";
+	font-family: "Lato Light", sans-serif;
 	color: #ffffff;
 	background-color: #4680ff;
 }
@@ -1005,7 +1007,7 @@ Red X
 
 button.redx {
 	color: #ffffff;
-	font-family: "Lato Light", "Segoe UI";
+	font-family: "Lato Light", sans-serif;
 	font-size: 14px;
 	background-color: #ff4646;
 }
@@ -1026,7 +1028,7 @@ Orange X
 
 button.orangex {
 	color: #ffffff;
-	font-family: "Lato Light", "Segoe UI";
+	font-family: "Lato Light", sans-serif;
 	font-size: 14px;
 	background-color: #ff8b4f;
 }
@@ -1047,7 +1049,7 @@ Theme X
  */
 
 button.themex {
-	font-family: "Lato Light", "Segoe UI";
+	font-family: "Lato Light", sans-serif;
 	font-size: 14px;
 	color: #ffffff;
 	background-color: #1c4254;

@@ -9,16 +9,16 @@
     <meta http-equiv="X-UA-Compatible" content = "ie=edge">
     <title>Annex Food</title>
 
-    
+
     <link type="text/css" href="./css/materialize.min.css" rel="stylesheet">
     <link rel="manifest" href="manifest.json"> <!--- This is to allow manifest to work on this page as well as the main page -->
-    
-    
+
+
     <link type="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <link type="text/css" href="./css/minorwidgets.css" rel="stylesheet">
     <script type="text/javascript" src="./js/materialize.min.js"></script>
-    
+
     <!--Apple support-->
     <link rel="apple-touch-icon" href = "./img/mylo.png">
     <meta name="apple-mobile-web-app-status-bar" content="#aaa">
@@ -26,16 +26,16 @@
 
 
     <style>
-        
+
         @font-face {
         font-family: 'Material Icons';
         font-style: normal;
         font-weight: 400;
-        
+
         src: url(https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
         format('woff2');
       }
-      
+
       h3{
         cursor:pointer;
         color:"#ffab91";
@@ -62,7 +62,7 @@
 
 </head>
 
-<body class= "grey lighten-4" 
+<body class= "grey lighten-4"
 style="background-position:center; padding-top: 0px" >
     <div class="alert" id = "box1">
         <div class="alertbox">
@@ -74,7 +74,7 @@ style="background-position:center; padding-top: 0px" >
 
     <!--Top NavBar-->
     <nav>
-        <div class= "nav-wrapper container" 
+        <div class= "nav-wrapper container"
         style="background-color:transparent; width:'100%'; "  >
             <a class="left" href="index.html">Annex<span>Food</span></a>
             <span class= "hider right grey-text text-darken-1">
@@ -131,7 +131,7 @@ style="background-position:center; padding-top: 0px" >
             </div>
         </li>
     </ul>
-      
+
 
     <article style="margin-top:55px ">
         <div class="panel-left" style="align-content: center; align-items:center; text-align:center">
@@ -157,7 +157,7 @@ style="background-position:center; padding-top: 0px" >
               </form>
           </div>
         </div>
-        
+
         <div class="panelList" >
             <div style="width: 100%; text-align: center" >
 
@@ -168,12 +168,12 @@ style="background-position:center; padding-top: 0px" >
                 </img>
 
             </div>
-            <div class="recipes container" >
+            <div class="recipes" >
 
             </div>
 
         </div>
-       
+
         <div class="panel-right">
           <br>
           <br>
@@ -193,7 +193,7 @@ style="background-position:center; padding-top: 0px" >
                     <a href="about.html"><i class="material-icons center">info</i> </a>
                 </div>
           </button>
-          
+
           <button class="blackx ">
               <div style="display: inline;">
                   <a href="contact.html">
@@ -223,13 +223,13 @@ style="background-position:center; padding-top: 0px" >
             <button class="orangex shOrange" style="margin: 5px">
                 Mains 🍽️
             </button>
-          
+
         </div>
 
         <div class="mobile-nav">
             <div style="display: flex; margin-top: 15px">
                 <div class="mobile-nav-item4">
-                    <a class="material-icons" href="./index.html" style="color: #2070ee;
+                    <a class="material-icons" href="index.html" style="color: #2070ee;
                     font-size: 35px;
                     ">
                         home
@@ -303,7 +303,7 @@ style="background-position:center; padding-top: 0px" >
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
     const db = firebase.firestore();
-    //CRUD 
+    //CRUD
 
   </script>
   <script src="./App.js"></script>
