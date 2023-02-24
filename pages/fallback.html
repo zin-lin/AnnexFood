@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AnnexFood</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/minorwidgets.css" rel="stylesheet">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href = "/img/mylo.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#aaa">
+    <meta name="theme-color" content="#aaa">
+
+    <style>
+        
+      @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      
+      src: url(https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+    }
+    
+    h3{
+      cursor:pointer;
+      color:"#ffab91";
+
+    }
+
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      cursor:pointer;
+      direction: ltr;
+     /* -webkit-font-feature-settings: 'liga';*/
+      -webkit-font-smoothing: antialiased;
+    }</style>
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class= "z-depth-0">
+    <div class= "nav-wrapper container" style="background-color:transparent; width:'100%'; "  >
+        <a href="/">Annex<span>Food</span></a>
+        <span class= "right grey-text text-darken-1">
+            <i class ="material-icons sidenav-trigger" data-target="side-menu" style="color:#fff;
+            cursor:pointer;" >menu</i>
+        </span>
+
+    </div>
+</nav>
+
+
+<ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">ANNEXCOOK</a></li>
+    <li><a href="/" class="waves-effect"
+        style="vertical-align: center;">
+        <i class="material-icons">home</i>Home</a></li>
+
+    <li><a href="/pages/about.html" class="waves-effect">
+        <i class="material-icons">info</i>About</a></li>
+
+    <li><div class="divider"></div></li>
+
+    <li><a href="/pages/contact.html" class="waves-effect">
+      <i class="material-icons">mail_outline</i>Contact</a>
+    </li>
+  </ul>
+
+  <!-- content -->
+  <div class="container grey-text" style="align-items: center;">
+    <h3 class="center">Opps!</h3>
+    
+    <p>Weak Or No Internet Connection</p>
+
+    <a href = "/"><button class="violet">Back To Home</button></a>
+
+  </div>
+  <script src="/js/App.js"></script>
+
+  <script src="/js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+/*Css Property
+Author : Zin Lin Htun
+Written : 2018
+*/
+
+.lesson{
+
+border-radius: 12px;
+margin:10px;
+display: inline-flex;
+transition: 0.4s ease;
+opacity: 0.8;
+padding:20px;
+background: linear-gradient(to left,#43abc5,#343434);
+background-blend-mode: screen;
+text-align: center;
+margin-top:30px;
+width: 25%;
+height:190px;
+min-width: 200px;
+
+}
+
+
+
+@media screen and (max-width:700px){
+
+
+   .lesson{
+
+     width: 80%;
+     
+     border-radius: 20px;
+     
+
+
+   }
+
+
+}
+
+
+

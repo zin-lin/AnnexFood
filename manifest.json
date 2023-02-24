@@ -1,0 +1,33 @@
+{
+    "name": "Annex's Recipe",
+    "short_name": "AnnexFood",
+    "start_url": "index.html",
+    "display":"standalone",
+    "background_color":"rgb(12, 20, 51)",
+    "theme_color":"rgb(12, 20, 51)",
+    "orientation": "portrait-primary",
+    "icons":[{
+        "src":"img/mylo.png",
+        "type":"image/png",
+        "sizes":"144x144"
+    },
+
+    {
+        "src":"img/mylo1.png",
+        "type":"image/png",
+        "sizes":"300x300",
+        "purpose": "any maskable"
+    },
+    {
+        "src":"img/mylo192.png",
+        "type":"image/png",
+        "sizes":"192x192"
+    },
+
+    {
+        "src":"img/mylo512.png",
+        "type":"image/png",
+        "sizes":"512x512"
+    }
+    ]
+}
