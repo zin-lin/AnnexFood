@@ -1123,7 +1123,8 @@ div nav-bar bottom
 	width: 100%;
 	height: 0px;
 	background-color: rgba(255, 255, 255, 0.55);
-	position: fixed; bottom: 0px;
+	position: fixed;
+	bottom: 0px;
 	transition: 0.4s ease;
 	opacity: 0;
 	visibility: hidden;
@@ -1177,6 +1178,7 @@ div nav-bar bottom
 		opacity: 1;
 		visibility: visible;
 		backdrop-filter: blur(1.3px);
+		-webkit-backdrop-filter: blur(1.3px);
 		box-shadow: 4px 1px 9px rgba(110, 109, 109, 0.27);
 	}
 
