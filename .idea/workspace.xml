@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="37d80160-9178-481f-be7b-ce87c76a1526" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/minorwidgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/minorwidgets.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +16,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/404.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/about.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/css/minorwidgets.css" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/index.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -57,7 +58,10 @@
       <workItem from="1678129540635" duration="9000" />
       <workItem from="1678139541301" duration="53000" />
       <workItem from="1678139603528" duration="155000" />
-      <workItem from="1678155221295" duration="288000" />
+      <workItem from="1678155221295" duration="460000" />
+      <workItem from="1678219152766" duration="12000" />
+      <workItem from="1678219646690" duration="1037000" />
+      <workItem from="1678285903601" duration="333000" />
     </task>
     <servers />
   </component>
