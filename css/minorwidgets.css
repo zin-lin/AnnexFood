@@ -25,6 +25,10 @@ h3{
 
 }
 
+body{
+	background:#ffffff
+}
+
 .material-icons {
 	font-family: 'Material Icons';
 	font-weight: normal;
@@ -1179,7 +1183,7 @@ div nav-bar bottom
 	}
 
 	body{
-
+	    background: #ffffff;
 		font-size: 21px;
 	}
 
