@@ -50,10 +50,11 @@ const renderRecipe = (data, id) =>{
            
             <div class="recipe-ingredients" style="max-width:200px">${data.ingredient}</div>
         </div>
-        <div class="recipe-delete" style="display: flex">
-            <button class="trans" > <i class="material-icons" data-id ="${id}" >book</i>
+        
+        <div class="recipe-delete" style="display: flex; color: grey">
+            <button class="trans" style="color: #b7b6b6" > <i class="material-icons" data-id ="${id}" >book</i>
             </button> 
-            <button class="trans" > <i class="material-icons" data-id ="${id}" >delete_outline</i>
+            <button class="trans" style="color: #b7b6b6"> <i class="material-icons" data-id ="${id}" >delete_outline</i>
             </button> 
         </div>
     </div>

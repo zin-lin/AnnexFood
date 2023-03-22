@@ -1,7 +1,4 @@
 //Firestore.instance.collection("recipe") - Dart
-
-
-
 var xox = [
     {id: 1, data: {title:"Hello Food", ingredient: "Hello Food, food, x"}},
     {id: 2, data: {title:"Hello Food 1", ingredient: "Hello Food, food, x"}},
@@ -40,11 +37,6 @@ const load = ()=> {
     });
 }
 
-// var load = ()=>{
-//     xox.forEach(ch=>{
-//         renderRecipe(ch.data, ch.id);
-//     })
-// }
 
 load();
 
@@ -130,18 +122,23 @@ catch (e){
 
 }
 
-firebase.firestore().enablePersistence()
-    .catch((err) => {
-        if (err.code == 'failed-precondition') {
-            // Multiple tabs open, persistence can only be enabled
-            // in one tab at a a time.
-            // ...
-        } else if (err.code == 'unimplemented') {
-            // The current browser does not support all of the
-            // features required to enable persistence
-            // ...
-        }
-    });
+// This block doesn't work well with Apple OSes, beacause Apple doesn't support PWA development well
+try {
+    firebase.firestore().enablePersistence()
+        .catch((err) => {
+            if (err.code == 'failed-precondition') {
+                // Multiple tabs open, persistence can only be enabled
+                // in one tab at a a time.
+                // ...
+            } else if (err.code == 'unimplemented') {
+                // The current browser does not support all of the
+                // features required to enable persistence
+                // ...
+            }
+        });
 // Subsequent queries will use persistence, if it was enabled successfully
+}
+catch (err) {
 
+}
 

@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37d80160-9178-481f-be7b-ce87c76a1526" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/auth.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/minorwidgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/minorwidgets.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/fallback.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +24,19 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/404.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/about.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/auth.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/contact.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/css/minorwidgets.css" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/js/db.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MdvUjFa1NsbQTQR3LqQnUHGbF9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,6 +73,21 @@
       <workItem from="1678219152766" duration="12000" />
       <workItem from="1678219646690" duration="1037000" />
       <workItem from="1678285903601" duration="333000" />
+      <workItem from="1678289310673" duration="691000" />
+      <workItem from="1678314290046" duration="2000" />
+      <workItem from="1678314969964" duration="51000" />
+      <workItem from="1678315051005" duration="250000" />
+      <workItem from="1678316298497" duration="15000" />
+      <workItem from="1678379519058" duration="42000" />
+      <workItem from="1678379710812" duration="409000" />
+      <workItem from="1678389673032" duration="290000" />
+      <workItem from="1678399639191" duration="604000" />
+      <workItem from="1678423260941" duration="693000" />
+      <workItem from="1678794222050" duration="113000" />
+      <workItem from="1678803262909" duration="130000" />
+      <workItem from="1679398079944" duration="5679000" />
+      <workItem from="1679495044178" duration="898000" />
+      <workItem from="1679507812303" duration="1242000" />
     </task>
     <servers />
   </component>
