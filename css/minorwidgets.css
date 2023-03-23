@@ -6,6 +6,7 @@ html{
 	-ms-user-select: none;
 	-o-user-select: none;
 	font-size: 13px;
+	background: var(--primary);
 	user-select: none;
 	font-family: "Montserrat", sans-serif;
 }
@@ -34,19 +35,17 @@ h3{
 	animation: fadeIn 1s ease;
 }
 
-input:autofill {
-	border: none;
-	outline:none;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+	outline: none;
+	background: transparent;
+	-webkit-box-shadow: 0 0 0 30px rgb(240,240,240)  inset !important;
 }
-
-input:-webkit-autofill {
-	border: none;
-	outline:none;
-}
-
 
 body{
-	background:#ffffff
+	background-color: #7a2b2b;
 }
 
 .material-icons {
@@ -408,7 +407,9 @@ border-color: #57a0d3;
 		width: 100%;
 		margin-top: 20px;
 		margin-bottom 	: 10px;
+		background-color: white;
 		border-radius: 5px;
+		  z-index: 23;
 		padding: 10px;
 		box-shadow: 1px 2px 11px 2px rgba(90, 90, 90, 0.074);
 		display: grid;
@@ -456,7 +457,7 @@ border-color: #57a0d3;
 	  }
 
 	  input{
-		font-family: Lato, sans-serif;
+		font-family: "Montserrat", sans-serif;
 		width: 80%;
 		  background: transparent;
 		  mask-border-mode: unset;
@@ -737,6 +738,12 @@ margin:10px;
 .full-bg-img-mask::-webkit-scrollbar-thumb {
 	background: rgba(11, 15, 23, 0.58);
 
+}
+
+.fill-page{
+	width: 100%;
+	height: 100vh;
+	background: white;
 }
 
 p.Osa2:hover{
@@ -1045,10 +1052,11 @@ hr {
 .panelList {
 
 	height: auto;
+	background: white;
 	float: left;
 	margin-left: 23%;
 	width: 54%;
-
+	z-index: 19;
 }
 
 a{
@@ -1273,6 +1281,10 @@ width:90%;
 ::-webkit-scrollbar-thumb {
 	background: rgba(202, 202, 204, 0.79);
 }
+::-webkit-scrollbar-track {
+	background: rgb(255, 255, 255);
+}
+
 
 /*
 Universal widgets for my project
