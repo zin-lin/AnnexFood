@@ -41,7 +41,7 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
 	outline: none;
 	background: transparent;
-	-webkit-box-shadow: 0 0 0 30px rgb(240,240,240)  inset !important;
+	-webkit-box-shadow: 0 0 0 30px rgba(245,245,245,0.93)  inset !important;
 }
 
 body{
