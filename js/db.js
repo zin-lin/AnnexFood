@@ -16,7 +16,7 @@ var xox = [
 
 
 const load = ()=> {
-    db.collection("recipe").onSnapshot((sn) => {
+    db.collection("recipe").limit(200).orderBy('title').onSnapshot((sn) => {
         //  console.log(sn.docChanges());
         sn.docChanges().forEach(ch => {
             // console.log(ch, ch.doc.data(), ch.doc.id);

@@ -32,21 +32,19 @@
         <div class= "nav-wrapper container"
              style="background-color:transparent; width:'100%'; "  >
             <a class="left" href="index.html">Annex<span>Food</span></a>
-            <span class= "right grey-text text-darken-1" onclick="()=>{
-                history.go(-1);
-            }">
-                    <i class ="material-icons sidenav-trigger" data-target="side-menu" style="color:#fff;" >
+            <div class= "right grey-text text-darken-1" onclick="{history.back()}">
+                    <i class ="material-icons "  style="color:#fff;" >
                         arrow_back_ios
                     </i>
-            </span>
+            </div>
         </div>
     </nav>
     <div class="full-bg-img">
 
     </div>
     <div class = 'full-bg-img-mask' >
-        <div style="background:rgba(245,245,245,0.93); height:80%; width:80%; max-height:370px; max-width:500px; min-width:300px;
-            border-radius:30px; box-shadow:2px 2px 18px 15px 0xff333333; overflow:auto; position: absolute" class="shadow-container">
+        <div class="shadow-container fader-in" style="background:rgba(245,245,245,0.93); height:80%; width:80%; max-height:370px; max-width:500px; min-width:300px;
+            border-radius:30px; box-shadow:2px 2px 18px 15px 0xff333333;  overflow:auto; position: absolute" id="login-container" >
             <div style="padding:20px; text-align:center; justify-content:center">
             <div style="display:flex">
                 <button class='circle' style="background:transparent; width:auto; height:auto; margin:0" >
@@ -80,5 +78,6 @@
             </div>
         </div>
     </div>
+
   </body>
 </html>
