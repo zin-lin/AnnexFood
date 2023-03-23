@@ -15,7 +15,7 @@ html{
 	-ms-user-select: none;
 	-o-user-select: none;
 	font-size: 13px;
-	background: var(--primary);
+	background: rgb(12, 20, 51);
 	user-select: none;
 	font-family: "Montserrat", sans-serif;
 }
@@ -45,8 +45,8 @@ h3{
 }
 
 body {
-	background-color: var(--primary);
-	background:var(--primary);
+	background-color: rgb(12, 20, 51);
+	background:rgb(12, 20, 51);
 }
 
 input:-webkit-autofill,
