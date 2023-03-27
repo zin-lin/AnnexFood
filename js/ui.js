@@ -53,9 +53,7 @@ const renderRecipe = (data, id) =>{
         
         <div class="recipe-delete" style="display: flex; color: grey">
             <button class="trans" style="color: #b7b6b6" > <i class="material-icons" data-id ="${id}" >book</i>
-            </button> 
-            <button class="trans" style="color: #b7b6b6"> <i class="material-icons" data-id ="${id}" >delete_outline</i>
-            </button> 
+            </button>   
         </div>
     </div>
  `;

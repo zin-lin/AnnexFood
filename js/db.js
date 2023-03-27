@@ -58,6 +58,12 @@ const form = document.getElementById("form");
 const form1 = document.getElementById("sideone");
 form.addEventListener("submit", evt=>{
     evt.preventDefault();
+    auth.onAuthStateChanged((user) => {
+        if (user == null) {
+            alert("Please log in to add a new recipe");
+            return;
+        }
+    })
     console.log("Logged");
     const val = form.title.value;
     if (val.toString().length !== 0) {
@@ -82,6 +88,12 @@ form.addEventListener("submit", evt=>{
 try {
     form1.addEventListener("submit", evt => {
         evt.preventDefault();
+        auth.onAuthStateChanged((user) => {
+            if (user == null) {
+                alert("Please log in to add a new recipe");
+                return;
+            }
+        })
         text = form1.titleSide.value;
         console.log(form1.titleSide.value + " :: " + form1.ingredientsSide.value);
         if (text.toString().length !== 0) {
@@ -90,10 +102,12 @@ try {
                 ingredient: form1.ingredientsSide.value,
             };
             db.collection("recipe").add(recipe)
-                .then(() => {
-                    console.log("Added")
+                .then((smth) => {
+                    if (smth === null) {
+                        alert("please log in to add a new recipe");
+                    }
                 })
-                .catch(err => console.log(err));
+                .catch(err => alert(err.message));
             form1.titleSide.value = "";
             form1.ingredientsSide.value = "";
         } else {
@@ -115,7 +129,7 @@ recipeContainer.addEventListener("click", eve=>{
 
     if (eve.target.tagName === "I"){
         const id = eve.target.getAttribute("data-id");
-        db.collection("recipe").doc(id).delete();
+        db.collection("recipe").doc(id).delete().catch((err)=>{alert(err.message);});
     }
 })}
 catch (e){
