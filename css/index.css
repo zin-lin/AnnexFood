@@ -337,7 +337,7 @@ form .input-field{
 	background-repeat: no-repeat;
 	filter: blur(2.9px);
 	opacity: 1;
-	transform: scale(1.1);
+	transform: scale(1.0);
 	overflow: hidden;
 	background-size: cover;
 	position: absolute;
