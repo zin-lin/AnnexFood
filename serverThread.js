@@ -7,7 +7,7 @@ const dynamicCacheName = "dynamic-v6";
 const asset = [
     "./", // User ask without the display start up just on server
     "./index.html",
-    "./App.js",
+    "./index.js",
     "./js/materialize.min.js",
     "./js/ui.js",
     "./pages/fallback.html",
