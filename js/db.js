@@ -107,7 +107,7 @@ try {
                         alert("please log in to add a new recipe");
                     }
                 })
-                .catch(err => alert(err.message));
+                .catch(err => console.log(err));
             form1.titleSide.value = "";
             form1.ingredientsSide.value = "";
         } else {
