@@ -12,7 +12,7 @@ const asset = [
     "./js/ui.js",
     "./pages/fallback.html",
     "./css/materialize.min.css",
-    "./css/minorwidgets.css",
+    "./css/index.css",
     "./img/dish.png",
     "./img/beef.png",
     "https://fonts.googleapis.com/icon?family=Material+Icons",

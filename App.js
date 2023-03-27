@@ -4,7 +4,7 @@
 //     //navigator is the whole app's frame in JS
 //     //Check whether sws are supported
 //
-//    navigator.serviceWorker.register("./sw.js")
+//    navigator.serviceWorker.register("./serverThread.js")
 //     .then((reg)=> console.log("Registered", reg))
 //     .catch((error)=> console.log("Error registering the serviceWorker...", err))
 //

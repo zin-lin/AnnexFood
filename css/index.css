@@ -179,6 +179,7 @@ nav .sidenav-trigger{
 }
 	  
 /* recipe styles */
+
 .recipes{
 	margin-top: 9px;
 	margin-bottom: 20px;
@@ -191,6 +192,8 @@ nav .sidenav-trigger{
 }
 .card-panel, .recipe{
 	width: 100%;
+	transition: 0.4s ease;
+	opacity: 0;
 	margin-top: 20px;
 	margin-bottom 	: 10px;
 	background-color: white;
@@ -248,7 +251,7 @@ input{
 	width: 80%;
 	background: transparent;
 	mask-border-mode: unset;
-	font-size: 13px;
+	font-size: 11px;
 	box-shadow: none !important;
 	border: none;
 	padding: 20px;
@@ -258,6 +261,7 @@ input{
 }
 
 input.noner{
+	font-size: 12px;
 	border-bottom: 1px solid rgba(49, 49, 49, 0.079);
 }
 

@@ -15,7 +15,7 @@ var xox = [
 ]
 
 
-const load = ()=> {
+const  load = ()=> {
     db.collection("recipe").limit(200).orderBy('title').onSnapshot((sn) => {
         //  console.log(sn.docChanges());
         sn.docChanges().forEach(ch => {
@@ -30,9 +30,9 @@ const load = ()=> {
 
             if (ch.type === "removed") {
                 //remove the document data to index.html
-
                 removeRecipe(ch.doc.id);
             }
+
         });
     });
 }

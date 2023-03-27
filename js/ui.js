@@ -42,7 +42,7 @@ try {
 const renderRecipe = (data, id) =>{
 
     const html =`  
-    <div class="card-panel recipe " data-id ="${id}">
+    <div class="card-panel recipe " data-id ="${id}" id = ${id}>
         <img src="./img/dish.png" alt="recipe thumb" />
     
         <div class="recipe-details">
@@ -63,7 +63,13 @@ const renderRecipe = (data, id) =>{
     console.log();
  
     try{
-    recipes.innerHTML += html;}
+    recipes.innerHTML += html;
+    setTimeout(   ()=>   {
+            const recipe = document.getElementById(id);
+            recipe.style.opacity = "1.0";
+        }, 100
+        );
+    }
     catch (e) {
         
     }
