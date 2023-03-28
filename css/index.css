@@ -352,6 +352,14 @@ form .input-field{
 	margin-right: 0px;
 }
 
+.highlight{
+	transition: 0.3s ease;
+	background: #eee; border-radius: 8px; padding: 5px;
+}
+
+.highlight:hover{
+	box-shadow: 1px 1px 6px 3px rgba(170, 170, 170, 0.4);
+}
 
 .full-bg-img-mask{
 	font-size: 14px;

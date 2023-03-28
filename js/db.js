@@ -22,19 +22,16 @@ const  load = ()=> {
             // console.log(ch, ch.doc.data(), ch.doc.id);
             //In Dart documentId here id
             //data is the same
-        setTimeout(()=>
-            {
-                if (ch.type === "added") {
-                    //add the document data to index.html
-                    renderRecipe(ch.doc.data(), ch.doc.id)
-                }
 
-                if (ch.type === "removed") {
-                    //remove the document data to index.html
-                    removeRecipe(ch.doc.id);
-                }
-            }, 0);
+            if (ch.type === "added") {
+                //add the document data to index.html
+                renderRecipe(ch.doc.data(), ch.doc.id)
+            }
 
+            if (ch.type === "removed") {
+                //remove the document data to index.html
+                removeRecipe(ch.doc.id);
+            }
         });
     });
 }
