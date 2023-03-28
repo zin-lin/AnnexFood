@@ -24,12 +24,17 @@ auth.onAuthStateChanged(user => {
     var parentContainer = document.getElementById("login-container");
     parentContainer.style.visibility = "visible";
     if (user) {
-        parentContainer.style.height = 76;
+        parentContainer.style.height = 96;
         parentContainer.style.boxShadow = 'none';
         parentContainer.style.backgroundColor ='transparent';
         container.innerHTML = `
         <div>
-            <button class="redx shRed" style="padding: 10px" onclick="signOut()">Log Out</button>
+            <button class="shRed  redx" style="padding: 10px" onclick="signOut()">
+                <div style="display: flex; align-items: center"> 
+                    <p>Log out</p>
+                    <span class = 'material-icons' style="margin-left: 10px">logout</span>
+                </div>            
+            </button>
         </div>
         `;
     }

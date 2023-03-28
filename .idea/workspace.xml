@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="37d80160-9178-481f-be7b-ce87c76a1526" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -99,7 +100,7 @@
       <workItem from="1679928863282" duration="351000" />
       <workItem from="1679929450301" duration="14441000" />
       <workItem from="1679992640868" duration="346000" />
-      <workItem from="1679998086165" duration="1628000" />
+      <workItem from="1679998086165" duration="4171000" />
     </task>
     <servers />
   </component>
