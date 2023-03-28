@@ -14,6 +14,7 @@ var xox = [
     {id: 12, data: {title:"Hello Food 11", ingredient: "Hello Food, food, x"}},
 ]
 
+var loading = document.getElementById('loading');
 
 const  load = ()=> {
     db.collection("recipe").limit(200).orderBy('title').onSnapshot((sn) => {
@@ -22,6 +23,13 @@ const  load = ()=> {
             // console.log(ch, ch.doc.data(), ch.doc.id);
             //In Dart documentId here id
             //data is the same
+            if (loading.style.visibility !== 'hidden')
+            {
+                loading.style.visibility = 'hidden';
+                loading.style.width = 0;
+                loading.style.height = 0;
+                loading.style.margin = 0;
+            }
 
             if (ch.type === "added") {
                 //add the document data to index.html
