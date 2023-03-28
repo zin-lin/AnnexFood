@@ -65,7 +65,7 @@ const renderRecipe = (data, id) =>{
     setTimeout(   ()=>   {
             const recipe = document.getElementById(id);
             recipe.style.opacity = "1.0";
-        }, 100
+        }, 0
         );
     }
     catch (e) {

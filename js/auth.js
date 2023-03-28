@@ -19,10 +19,11 @@ const signOut = () => {
 var reg = 'sign';
 
 auth.onAuthStateChanged(user => {
-    if (user) {
 
-        var container = document.getElementById("container-login");
-        var parentContainer = document.getElementById("login-container");
+    var container = document.getElementById("container-login");
+    var parentContainer = document.getElementById("login-container");
+    parentContainer.style.visibility = "visible";
+    if (user) {
         parentContainer.style.height = 76;
         parentContainer.style.boxShadow = 'none';
         parentContainer.style.backgroundColor ='transparent';
