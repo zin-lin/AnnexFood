@@ -1,6 +1,6 @@
 var bar = document.getElementById("search");
 var filter = document.getElementById("filtered");
-bar.addEventListener("keypress", (event) => {
+bar.addEventListener("keydown", (event) => {
     filter.innerHTML =``;
     let text = bar.value+ event.key;
     db.collection("dish").orderBy('date').onSnapshot((sn) => {

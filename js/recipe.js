@@ -16,11 +16,22 @@ var category = document.getElementById('cat');
 var adderSt = document.getElementById('adderst');
 var boxCt = document.getElementById('boxCt');
 var divCt = document.getElementById('divCt');
+var boxSt = document.getElementById('boxSt');
+var divSt = document.getElementById('divSt');
+var boxIn = document.getElementById('boxIn');
+var killIn = document.getElementById('killIn');
+var killSt = document.getElementById('killSt');
+var divIn = document.getElementById('divIn');
+var inTx = document.getElementById('in-tx');
+var inSt = document.getElementById('steps-tx');
 var IMG = document.getElementById('img');
 const urlParams = new URLSearchParams(window.location.search);
 const did = urlParams.get('did');
 const name = document.getElementById('name');
 const des = document.getElementById('des');
+const secIn = document.getElementById('secIn');
+const secSt = document.getElementById('secSt');
+var doc =db.collection("dish").doc(did);
 
 category.onclick =() =>{
     boxCt.style.visibility = `visible`;
@@ -31,6 +42,29 @@ boxCt.onclick = ()=>{
     boxCt.style.visibility = `hidden`;
     boxCt.style.opacity = `0.0`;
 }
+
+killIn.onclick = ()=>{
+    boxIn.style.visibility = `hidden`;
+    boxIn.style.opacity = `0.0`;
+    let val = inTx.value;
+    ingredients = val;
+    addIngridients(ingredients);
+    let inUpdate = steps.split(", ");
+    doc.update({ingredients: inUpdate}).catch(e=>{console.log(e)});
+}
+
+killSt.onclick = ()=>{
+
+    boxSt.style.visibility = `hidden`;
+    boxSt.style.opacity = `0.0`;
+    let val = inSt.value;
+    steps = val;
+    addSteps(steps);
+    let stUpdate = steps.split('\n');
+    doc.update({steps: stUpdate}).catch(e=>{console.log(e)});
+}
+
+
 
 const addIngridients = (text) => {
     var texts = text.split(", ");
@@ -93,7 +127,7 @@ const addSteps = (text) => {
 }
 
 
-db.collection("dish").doc(did).get().then((doc)=>{
+doc.get().then((doc)=>{
     name.value = doc.data().name;
     des.value = doc.data().des;
     category.innerHTML = doc.data().category===""? "No category" : doc.data().category;
@@ -127,5 +161,18 @@ db.collection("dish").doc(did).get().then((doc)=>{
     addSteps(steps);
     if (doc.data().ph_url !== "")
         IMG.src = doc.data().ph_url
+    inTx.value = ingredients;
+    inSt.value = steps;
+
 
 }).catch();
+
+secIn.addEventListener("click", (e)=>{
+    boxIn.style.visibility = `visible`;
+    boxIn.style.opacity = `1.0`;
+})
+
+secSt.addEventListener("click", (e)=>{
+    boxSt.style.visibility = `visible`;
+    boxSt.style.opacity = `1.0`;
+})
