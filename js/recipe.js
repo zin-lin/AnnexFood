@@ -5,6 +5,7 @@
 
 var ingredients = "";
 var steps = "";
+var pht_url = "";
 /**
  * Document set up
  * @type {HTMLElement}
@@ -18,12 +19,16 @@ var boxCt = document.getElementById('boxCt');
 var divCt = document.getElementById('divCt');
 var boxSt = document.getElementById('boxSt');
 var divSt = document.getElementById('divSt');
+var boxPh = document.getElementById('boxPh');
+var divPh = document.getElementById('divPh');
+var killPh = document.getElementById('killPh');
 var boxIn = document.getElementById('boxIn');
 var killIn = document.getElementById('killIn');
 var killSt = document.getElementById('killSt');
 var divIn = document.getElementById('divIn');
 var inTx = document.getElementById('in-tx');
 var inSt = document.getElementById('steps-tx');
+var phTx = document.getElementById('photo-tx');
 var IMG = document.getElementById('img');
 const urlParams = new URLSearchParams(window.location.search);
 const did = urlParams.get('did');
@@ -49,7 +54,7 @@ killIn.onclick = ()=>{
     let val = inTx.value;
     ingredients = val;
     addIngridients(ingredients);
-    let inUpdate = steps.split(", ");
+    let inUpdate = ingredients.split(", ");
     doc.update({ingredients: inUpdate}).catch(e=>{console.log(e)});
 }
 
@@ -138,6 +143,8 @@ doc.get().then((doc)=>{
         steps += step.toString()+"\n";
     })
 
+    pht_url = doc.data().pht_url;
+
     db.collection("categories").onSnapshot(sn =>{
         sn.docChanges().forEach(doc=>{
             var nameC = doc.doc.data().name;
@@ -147,6 +154,7 @@ doc.get().then((doc)=>{
             divCt.innerHTML += `
             <button class="grayx" style="margin: 6px" onclick="{
                  category.innerHTML = '${nameC}';
+                 doc.update({category: '${nameC}'})
             }"
             }>${nameC}</button>`
         })
@@ -175,4 +183,26 @@ secIn.addEventListener("click", (e)=>{
 secSt.addEventListener("click", (e)=>{
     boxSt.style.visibility = `visible`;
     boxSt.style.opacity = `1.0`;
+})
+
+name.addEventListener("blur", (e)=>{
+    doc.update({name: name.value});
+})
+
+des.addEventListener("blur", (e)=>{
+    doc.update({des: des.value});
+})
+
+IMG.addEventListener("click", (e)=>{
+    boxPh.style.visibility = `visible`;
+    phTx.value = pht_url=== undefined ?"":pht_url;
+    boxPh.style.opacity = `1.0`;
+})
+
+killPh.addEventListener("click", (e)=>{
+    boxPh.style.visibility = `hidden`;
+    boxPh.style.opacity = `0.0`;
+    let url = phTx.value;
+    doc.update({ph_url: url});
+    IMG.src = url;
 })
