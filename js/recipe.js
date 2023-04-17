@@ -6,6 +6,7 @@
 var ingredients = "";
 var steps = "";
 var pht_url = "";
+var iid = "";
 /**
  * Document set up
  * @type {HTMLElement}
@@ -37,38 +38,6 @@ const des = document.getElementById('des');
 const secIn = document.getElementById('secIn');
 const secSt = document.getElementById('secSt');
 var doc =db.collection("dish").doc(did);
-
-category.onclick =() =>{
-    boxCt.style.visibility = `visible`;
-    boxCt.style.opacity = `1.0`;
-}
-
-boxCt.onclick = ()=>{
-    boxCt.style.visibility = `hidden`;
-    boxCt.style.opacity = `0.0`;
-}
-
-killIn.onclick = ()=>{
-    boxIn.style.visibility = `hidden`;
-    boxIn.style.opacity = `0.0`;
-    let val = inTx.value;
-    ingredients = val;
-    addIngridients(ingredients);
-    let inUpdate = ingredients.split(", ");
-    doc.update({ingredients: inUpdate}).catch(e=>{console.log(e)});
-}
-
-killSt.onclick = ()=>{
-
-    boxSt.style.visibility = `hidden`;
-    boxSt.style.opacity = `0.0`;
-    let val = inSt.value;
-    steps = val;
-    addSteps(steps);
-    let stUpdate = steps.split('\n');
-    doc.update({steps: stUpdate}).catch(e=>{console.log(e)});
-}
-
 
 
 const addIngridients = (text) => {
@@ -114,9 +83,7 @@ const addSteps = (text) => {
             if (superCount -1 > index){
                 ingre.innerHTML += `
                 <div style="width: 14px; border-radius: 7px; height: 50px; background: #ddd;
-                margin: auto;
-                ">
-                    
+                margin: auto;">    
                 </div>
                 `
             }
@@ -132,18 +99,18 @@ const addSteps = (text) => {
 }
 
 
-doc.get().then((doc)=>{
-    name.value = doc.data().name;
-    des.value = doc.data().des;
-    category.innerHTML = doc.data().category===""? "No category" : doc.data().category;
-    doc.data().ingredients.forEach(ingredient =>{
+doc.get().then((d)=>{
+    name.value = d.data().name;
+    des.value = d.data().des;
+    category.innerHTML = d.data().category===""? "No category" : d.data().category;
+    d.data().ingredients.forEach(ingredient =>{
         ingredients += ingredient.toString()+", ";
     })
-    doc.data().steps.forEach(step =>{
+    d.data().steps.forEach(step =>{
         steps += step.toString()+"\n";
     })
-
-    pht_url = doc.data().pht_url;
+    iid += d.data().user_id;
+    pht_url = d.data().ph_url;
 
     db.collection("categories").onSnapshot(sn =>{
         sn.docChanges().forEach(doc=>{
@@ -167,42 +134,121 @@ doc.get().then((doc)=>{
         adderSt.style.visibility = `hidden`;
     addIngridients(ingredients);
     addSteps(steps);
-    if (doc.data().ph_url !== "")
-        IMG.src = doc.data().ph_url
+    if (d.data().ph_url !== "")
+        IMG.src = d.data().ph_url
     inTx.value = ingredients;
     inSt.value = steps;
 
+    name.active = false;
+    des.active = false;
+
+    auth.onAuthStateChanged(user => {
+        console.log(auth.currentUser.uid)
+        if (user.uid === iid) {
+            name.active = true;
+            des.active = true;
+            adderSt.addEventListener("click", (e) => {
+                if (auth.currentUser) {
+                    boxIn.style.visibility = `visible`;
+                    boxIn.style.opacity = `1.0`;
+                }
+            })
+
+            adderSt.addEventListener("click", (e) => {
+                if (auth.currentUser){
+                    boxSt.style.visibility = `visible`;
+                    boxSt.style.opacity = `1.0`;
+                }
+            })
+
+            category.onclick = () => {
+                if (auth.currentUser) {
+                    boxCt.style.visibility = `visible`;
+                    boxCt.style.opacity = `1.0`;
+                }
+            }
+
+            boxCt.onclick = () => {
+                if (auth.currentUser) {
+                    boxCt.style.visibility = `hidden`;
+                    boxCt.style.opacity = `0.0`;
+                }
+            }
+
+            killIn.onclick = () => {
+                if (auth.currentUser) {
+                    boxIn.style.visibility = `hidden`;
+                    boxIn.style.opacity = `0.0`;
+                    let val = inTx.value;
+                    ingredients = val;
+                    addIngridients(ingredients);
+                    let inUpdate = ingredients.split(", ");
+                    doc.update({ingredients: inUpdate}).catch(e => {
+                        console.log(e)
+                    });
+                }
+            }
+
+            killSt.onclick = () => {
+                if (auth.currentUser){
+                    boxSt.style.visibility = `hidden`;
+                    boxSt.style.opacity = `0.0`;
+                    let val = inSt.value;
+                    steps = val;
+                    addSteps(steps);
+                    let stUpdate = steps.split('\n');
+                    doc.update({steps: stUpdate}).catch(e => {
+                        console.log(e)
+                    });
+                }
+            }
+
+
+            secIn.addEventListener("click", (e) => {
+                if (auth.currentUser) {
+                    boxIn.style.visibility = `visible`;
+                    boxIn.style.opacity = `1.0`;
+                }
+            })
+
+            secSt.addEventListener("click", (e) => {
+                if (auth.currentUser) {
+                    boxSt.style.visibility = `visible`;
+                    boxSt.style.opacity = `1.0`;
+                }
+            })
+
+            name.addEventListener("blur", (e) => {
+                if (auth.currentUser){
+                    doc.update({name: name.value});
+                }
+            })
+
+            des.addEventListener("blur", (e) => {
+                if (auth.currentUser){
+                    doc.update({des: des.value});
+                }
+            })
+
+            IMG.addEventListener("click", (e) => {
+                if (auth.currentUser){
+                    boxPh.style.visibility = `visible`;
+                    phTx.value = pht_url === undefined || pht_url === "" ? "img/beef.png" : pht_url;
+                    boxPh.style.opacity = `1.0`;
+                }
+            })
+
+            killPh.addEventListener("click", (e) => {
+                if (auth.currentUser){
+                    boxPh.style.visibility = `hidden`;
+                    boxPh.style.opacity = `0.0`;
+                    let url = phTx.value;
+                    doc.update({ph_url: url});
+                    IMG.src = url;
+                    pht_url = url;
+                }
+            })
+        }
+    })
 
 }).catch();
-
-secIn.addEventListener("click", (e)=>{
-    boxIn.style.visibility = `visible`;
-    boxIn.style.opacity = `1.0`;
-})
-
-secSt.addEventListener("click", (e)=>{
-    boxSt.style.visibility = `visible`;
-    boxSt.style.opacity = `1.0`;
-})
-
-name.addEventListener("blur", (e)=>{
-    doc.update({name: name.value});
-})
-
-des.addEventListener("blur", (e)=>{
-    doc.update({des: des.value});
-})
-
-IMG.addEventListener("click", (e)=>{
-    boxPh.style.visibility = `visible`;
-    phTx.value = pht_url=== undefined ?"":pht_url;
-    boxPh.style.opacity = `1.0`;
-})
-
-killPh.addEventListener("click", (e)=>{
-    boxPh.style.visibility = `hidden`;
-    boxPh.style.opacity = `0.0`;
-    let url = phTx.value;
-    doc.update({ph_url: url});
-    IMG.src = url;
-})

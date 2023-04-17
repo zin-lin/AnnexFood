@@ -122,12 +122,20 @@ form.addEventListener("submit", evt=>{
             user_id: auth.currentUser.uid,
 
         };
-        db.collection("dish").add(recipe).then(() => {
+        db.collection("dish").add(recipe).then((doc) => {
             console.log("Added")
+            if (smth === null) {
+                alert("please log in to add a new recipe");
+            }
+            else {
+                var url = "./recipe.html?did=" + doc.id;
+                window.location.href = url;
+            }
         }).catch(err => console.log(err));
 
         form.title.value = "";
         form.ingredients.value="";
+
     }
     else {
         alertbox.style.visibility = "visible";
@@ -139,6 +147,7 @@ form.addEventListener("submit", evt=>{
 try {
     form1.addEventListener("submit", evt => {
         evt.preventDefault();
+
         var userNow =null;
         auth.onAuthStateChanged((user) => {
             if (user == null) {
@@ -152,10 +161,11 @@ try {
         if (text.toString().length !== 0) {
 
             const now = new Date();
+            const val = form1.titleSide.value;
             const timeNow = now.getTime().toString();
             const recipe = {
                 name: val,
-                des: form.ingredients.value,
+                des: form1.ingredientsSide.value,
                 date: timeNow,
                 steps:[],
                 category: "",
@@ -168,6 +178,10 @@ try {
                 .then((smth) => {
                     if (smth === null) {
                         alert("please log in to add a new recipe");
+                    }
+                    else {
+                        var url = "./recipe.html?did=" + smth.id;
+                        window.location.href = url;
                     }
                 })
                 .catch(err => console.log(err));
