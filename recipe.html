@@ -1,20 +1,20 @@
 <!--Author : Zin Lin Htun-->
 <html lang="en">
-  <head>
+<head>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta http-equiv="X-UA-Compatible" content = "ie=edge">
-      <meta name="theme-color" content="rgb(12, 20, 51)">
+    <meta name="theme-color" content="rgb(12, 20, 51)">
     <title>Annex Food</title>
 
 
     <link type="text/css" href="./css/materialize.min.css" rel="stylesheet">
     <link rel="manifest" href="./manifest.json"> <!--- This is to allow manifest to work on this page as well as the main page -->
-      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link type="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link type="text/css" href="css/index.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 </head>
 
 <body
-style="background-position:center; padding-top: 0px" >
+        style="background-position:center; padding-top: 0px" >
 <div class="fill-page">
     <div class="alert" id = "box1">
         <div class="alertbox">
@@ -39,11 +39,33 @@ style="background-position:center; padding-top: 0px" >
         </div>
     </div>
 
+    <div class="alert" id = "boxIn">
+        <div class="alertbox">
+            <p class="aTitle"> A Recipe Does Need a Title 😉</p>
+            <p class="aText">Opps! A recipe can only be added to the database if a title exists</p>
+            <button class="grayx"  id="alert1">Ok, Got it !</button>
+        </div>
+    </div>
+
+    <div class="alert" id = "boxSt">
+        <div class="alertbox">
+            <p class="aTitle"> A Recipe Does Need a Title 😉</p>
+            <p class="aText">Opps! A recipe can only be added to the database if a title exists</p>
+            <button class="grayx"  id="alert1">Ok, Got it !</button>
+        </div>
+    </div>
+
+    <div class="alert" id = "boxCt">
+        <div class="alertbox" id = "divCt">
+            <p class="aTitle">Choose Categories</p>
+        </div>
+    </div>
+
     <!--Top NavBar-->
 
     <nav>
         <div class= "nav-wrapper container"
-        style="background-color:transparent; width:'100%'; "  >
+             style="background-color:transparent; width:'100%'; "  >
             <a class="left" href="index.html">Annex<span>Food</span></a>
             <span class= "hider right grey-text text-darken-1">
                 <i class ="material-icons sidenav-trigger" data-target="side-menu" style="color:#fff;" >
@@ -63,7 +85,7 @@ style="background-position:center; padding-top: 0px" >
     <ul id="side-menu" class="sidenav side-menu">
         <li><a class="subheader">ANNEXCOOK</a></li>
         <li><a href="index.html" class="waves-effect"
-            style="vertical-align: center;">
+               style="vertical-align: center;">
             <i class="material-icons">home</i>Home</a></li>
 
         <li><a href="about.html" class="waves-effect">
@@ -80,26 +102,26 @@ style="background-position:center; padding-top: 0px" >
         </li>
         <li>
             <div style="padding: 20px">
-            <hr/>
+                <hr/>
 
-            <button class="greenx shGreen" style="margin: 5px">
-                Vegetarian
-            </button>
-            <button class="greenX shGreen" style="margin: 5px">
-                Vegan
-            </button>
-            <br/>
-            <button class="bluex shBlue" style="margin: 5px">
-                Starter
-            </button>
-            <button class="themex shTheme" style="margin: 5px">
-                Deserts
-            </button>
-            <br/>
+                <button class="greenx shGreen" style="margin: 5px">
+                    Vegetarian
+                </button>
+                <button class="greenX shGreen" style="margin: 5px">
+                    Vegan
+                </button>
+                <br/>
+                <button class="bluex shBlue" style="margin: 5px">
+                    Starter
+                </button>
+                <button class="themex shTheme" style="margin: 5px">
+                    Deserts
+                </button>
+                <br/>
 
-            <button class="orangex shOrange" style="margin: 5px">
-                Mains
-            </button>
+                <button class="orangex shOrange" style="margin: 5px">
+                    Mains
+                </button>
             </div>
         </li>
     </ul>
@@ -107,78 +129,108 @@ style="background-position:center; padding-top: 0px" >
 
     <article style="margin-top:55px ">
         <div class="panel-left" style="align-content: center; align-items:center; text-align:center">
-          <p style="align-items: center;"><b style="color: #777">Add New Recipe </b></p>
+            <p style="align-items: center;"><b style="color: #777">Add New Recipe </b></p>
 
-          <div style="text-align: center;">
-              <form class="add-recipe container section" id="form">
-                  <br/>
+            <div style="text-align: center;">
+                <form class="add-recipe container section" id="form">
+                    <br/>
 
-                  <button class="blackx" disabled style="align-self: flex-start">Title</button>
-                  <input placeholder="Lamb Soup" id="title" type="text" class="validate noner" style="font-size: 13px"/>
-                  <br/>
+                    <button class="blackx" disabled style="align-self: flex-start">Title</button>
+                    <input placeholder="Lamb Soup" id="title" type="text" class="validate noner" style="font-size: 13px"/>
+                    <br/>
 
-                  <button class="blackx" disabled style="align-self: flex-start">About recipe</button>
-                  <input placeholder="A Spicy Indian cousine" id="ingredients" type="text"
-                         class="validate noner"  style="font-size: 13px"/>
+                    <button class="blackx" disabled style="align-self: flex-start">About recipe</button>
+                    <input placeholder="A Spicy Indian cousine" id="ingredients" type="text"
+                           class="validate noner"  style="font-size: 13px"/>
 
-                  <br/>
-                  <br/>
-                  <button class="grayx" type="submit">
-                    Add +
-                  </button>
-              </form>
-          </div>
+                    <br/>
+                    <br/>
+                    <button class="grayx" type="submit">
+                        Add +
+                    </button>
+                </form>
+            </div>
         </div>
 
         <div class="panelList fader-in" >
-            <div style="width: 100%; text-align: center" >
+            <!-- content -->
+            <div class="container grey-text fader-in" style="margin-top: 0px; width: 100%;">
+                <div style="text-align: center;">
+                    <img id = "img" src="img/beef.png"
+                    style="width:100%;box-shadow: -1px 1px 16px 1px rgba(61, 61, 61, 0.47); height: 280px;object-fit: cover ;background-position: center; "
+                    />
+                    <textarea id ="name" class="cen big" placeholder="Name"
+                    style="font-size: 36px; color: #888;
+                    outline: none; font-weight:bold;
+                    margin-top: 20px; max-width: 80%;
+                    border-bottom: none;">
+                    </textarea>
+                    <br/>
+                    <textarea id ="des" class="cen big" multiple
+                    style="font-size: 20px;
+                    outline: none; color: #bbb; max-width:600px;
+                    border-bottom: none;" placeholder="Description of the recipe">
+                    </textarea>
+                    </br>
+                    <button class="highlight" style="color:#888; margin: auto" id = "cat"></button>
+                    </br></br>
 
-                <img class="cardMain"
-                     src="./img/beef.png" draggable="true" >
-                </img>
+                    <hr style="width: 80%">
+                    <h3>III</h3>
+                    <h5>What we need</h5>
+                    <br/>
+                    <div id = "ingredients-recipe" style="width:auto; ">
+                    </div>
+                    <button class="grayx" style="padding: 10px;
+                    " id ="adderin">Add Ingredients</button>
+                    <hr style="width: 80%"/>
 
-            </div>
-            <div id = 'loading' style="display: flex; justify-content: center">
-                <img src="img/loading.gif" style="width: 60px; margin: 100px"/>
-            </div>
-            <div class="recipes" >
+                    <h3>&ltI&gt</h3>
+                    <h5>Steps</h5>
+                    <div id = "steps-recipe" style="width:auto; padding: 20px">
+                    </div>
+                    <button class="grayx" style="padding: 10px;
+                    " id ="adderst">Add Ingredients</button>
+                    <hr style="width: 80%"/>
 
+                    <br></br>
+                </div>
             </div>
 
         </div>
 
         <div class="panel-right">
-          <br>
-          <br>
+            <br>
+            <br>
             <button class="blackx "><a href="about.html">Annex Recipes</a></button>
-          <hr/>
-          <button class="blackx " onclick="{
+            <hr/>
+            <button class="blackx "  onclick="{
 
             window.location.href = 'search.html';
             }">🔎︎ Search Anything ...</button>
 
-          <hr/>
-          <button class="blackx ">
-              <div style="display:inline">
-                  <a href="index.html"> <i class="material-icons center">home</i></a>
-              </div>
-          </button>
+            <hr/>
+            <button class="blackx ">
+                <div style="display:inline">
+                    <a href="index.html"> <i class="material-icons center">home</i></a>
+                </div>
+            </button>
 
-          <button class="blackx ">
+            <button class="blackx ">
                 <div style="display: inline;">
                     <a href="about.html"><i class="material-icons center">info</i> </a>
                 </div>
-          </button>
+            </button>
 
-          <button class="blackx ">
-              <div style="display: inline;">
-                  <a href="contact.html">
-                      <i class="material-icons center">
-                          mail_outline
-                      </i>
-                  </a>
-              </div>
-          </button>
+            <button class="blackx ">
+                <div style="display: inline;">
+                    <a href="contact.html">
+                        <i class="material-icons center">
+                            mail_outline
+                        </i>
+                    </a>
+                </div>
+            </button>
 
             <button class="blackx ">
                 <div style="display: inline;">
@@ -241,7 +293,7 @@ style="background-position:center; padding-top: 0px" >
     </article>
 
 
-  <!-- add recipe side nav -->
+    <!-- add recipe side nav -->
     <div id="side-form" class="sidenav side-form">
         <form class="formx add-recipe container section" style="cursor: pointer;" id="sideone">
             <p class="aTitle" foreground="#ffab91">New Recipe</p>
@@ -270,13 +322,15 @@ style="background-position:center; padding-top: 0px" >
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
 
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-             https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
     <script src="./js/init.js"></script>
     <script src="./index.js"></script>
     <script src="./js/ui.js"></script>
     <script src="./js/db.js"></script>
+    <script src="./js/recipe.js"></script>
+
 </div>
 </body>
 </html>

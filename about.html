@@ -187,7 +187,10 @@
           <button class="blackx "><a href="about.html">Annex Recipes</a></button>
 
           <hr/>
-          <button class="blackx ">🔎︎ Search Anything ...</button>
+          <button class="blackx "  onclick="{
+
+                  window.location.href = 'search.html';
+                  }">🔎︎ Search Anything ...</button>
 
           <hr/>
           <button class="blackx ">
@@ -237,7 +240,7 @@
                   </a>
               </div>
               <div class="mobile-nav-item4">
-                  <a class="material-icons"  href="about.html">
+                  <a class="material-icons"  href="search.html">
                       search
                   </a>
               </div>
@@ -255,12 +258,19 @@
           </div>
       </div>
   </article>
-  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- These SDK files are written by Google Firebase team-->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
     <script src="./js/init.js"></script>
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
     <script src="./js/ui.js"></script>
     <script src="./js/db.js"></script>
  </div>

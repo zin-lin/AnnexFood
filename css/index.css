@@ -499,6 +499,32 @@ button.greenx {
 	background-color: #69e8a4;
 }
 
+.cen{
+	text-align: center;
+}
+
+input[type="text"] .big {
+	font-size: 34px;
+	outline: none;
+	border-bottom: none;
+}
+
+textarea {
+	font-family: "Montserrat", sans-serif;
+	width: auto;
+	background: transparent;
+	mask-border-mode: unset;
+	font-size: 11px;
+	box-shadow: none !important;
+	border: none;
+	padding: 10px;
+	transition: 0.4s ease;
+	border-bottom: 1px solid #949494;
+	-webkit-box-shadow: none !important;
+	resize: none;
+	height: auto;
+}
+
 .greenx:hover {
 	background-color: #2c724c;
 }

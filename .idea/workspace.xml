@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37d80160-9178-481f-be7b-ce87c76a1526" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/recipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ui.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -35,6 +44,11 @@
     <setting file="file://$PROJECT_DIR$/js/auth.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/js/db.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/js/init.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/js/recipe.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/js/search.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/js/ui.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/recipe.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/search.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/serverThread.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -50,15 +64,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/zinli/Downloads/ig-test-js-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -107,7 +123,17 @@
       <workItem from="1679928863282" duration="351000" />
       <workItem from="1679929450301" duration="14441000" />
       <workItem from="1679992640868" duration="346000" />
-      <workItem from="1679998086165" duration="9982000" />
+      <workItem from="1679998086165" duration="11814000" />
+      <workItem from="1680052245876" duration="45000" />
+      <workItem from="1680108108223" duration="358000" />
+      <workItem from="1680148687907" duration="12000" />
+      <workItem from="1680624719476" duration="1790000" />
+      <workItem from="1680664747418" duration="2861000" />
+      <workItem from="1680785286395" duration="901000" />
+      <workItem from="1681086422842" duration="12665000" />
+      <workItem from="1681193294886" duration="2586000" />
+      <workItem from="1681225017931" duration="2571000" />
+      <workItem from="1681678652884" duration="17622000" />
     </task>
     <servers />
   </component>
