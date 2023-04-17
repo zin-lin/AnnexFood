@@ -147,7 +147,7 @@ doc.get().then((d)=>{
         if (user.uid === iid) {
             name.active = true;
             des.active = true;
-            adderSt.addEventListener("click", (e) => {
+            adderIn.addEventListener("click", (e) => {
                 if (auth.currentUser) {
                     boxIn.style.visibility = `visible`;
                     boxIn.style.opacity = `1.0`;
