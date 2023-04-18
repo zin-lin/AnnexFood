@@ -1,4 +1,8 @@
-//Check Service Worker Is Support
+/**
+ * @author: Zin Lin Htun
+ */
+
+//Check Service Worker Is Supported
 
 if("serviceWorker" in navigator){
     //navigator is the whole app's frame in JS

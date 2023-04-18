@@ -82,22 +82,38 @@
       <div style="padding: 20px">
         <hr/>
 
-        <button class="greenx shGreen" style="margin: 5px">
+
+        <button class="greenx shGreen" style="margin: 5px" onclick="{
+                let url = 'filter.html?cat='+ 'Vegetarian'
+                window.location.href = url;
+            }">
           Vegetarian
         </button>
-        <button class="greenX shGreen" style="margin: 5px">
+        <button class="greenX shGreen" style="margin: 5px" onclick="{
+                let url = 'filter.html?cat='+ 'Vegan'
+                window.location.href = url;
+            }">
           Vegan
         </button>
         <br/>
-        <button class="bluex shBlue" style="margin: 5px">
+        <button class="bluex shBlue" style="margin: 5px" onclick="{
+                let url = 'filter.html?cat='+ 'Starter'
+                window.location.href = url;
+            }">
           Starter
         </button>
-        <button class="themex shTheme" style="margin: 5px">
+        <button class="themex shTheme" style="margin: 5px" onclick="{
+                let url = 'filter.html?cat='+ 'Deserts'
+                window.location.href = url;
+            }">
           Deserts
         </button>
         <br/>
 
-        <button class="orangex shOrange" style="margin: 5px">
+        <button class="orangex shOrange" style="margin: 5px" onclick="{
+                let url = 'filter.html?cat='+ 'Mains'
+                window.location.href = url;
+            }">
           Mains
         </button>
       </div>
