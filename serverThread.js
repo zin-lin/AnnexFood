@@ -13,6 +13,8 @@ const asset = [
     "./ui.js",
     "./search.html",
     "./search.js",
+    "./filter.html",
+    "./filter.js",
     "./about.html",
     "./contact.html",
     "./recipe.js",

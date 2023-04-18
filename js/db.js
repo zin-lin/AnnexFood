@@ -1,5 +1,8 @@
 //Firestore.instance.collection("recipe") - Dart
-
+/**
+ * @author: Zin Lin Htun
+ * @type {JavaScript}
+ */
 
 var loading = document.getElementById('loading');
 // var groups = [

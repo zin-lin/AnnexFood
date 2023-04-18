@@ -39,42 +39,6 @@
         </div>
     </div>
 
-    <div class="alert" id = "boxIn">
-        <div class="alertbox">
-            <p class="aTitle"> List all your ingredients sperated by a comma</p>
-            <input placeholder="your ingredients" id = 'in-tx' autofocus/>
-            <button class="grayx"  id="killIn">Save</button>
-        </div>
-    </div>
-
-
-    <div class="alert" id = "boxPh">
-        <div class="alertbox">
-            <p class="aTitle"> Choose Photo Url</p>
-            <input placeholder="your Image Url" id = 'photo-tx' autofocus/>
-            <button class="grayx"  id="killPh">Save</button>
-        </div>
-    </div>
-
-    <div class="alert" id = "boxSt">
-        <div class="alertbox">
-            <p class="aTitle">List All your steps separated by a line.</p>
-            <textarea id ="steps-tx" class="cen big" multiple
-                      style="font-size: 15px;
-                    outline: none; color: #bbb; max-width:600px;
-                    border-bottom: none;" placeholder="Your Steps">
-            </textarea>
-            <br/>
-            <button class="grayx"  id="killSt">Save</button>
-        </div>
-    </div>
-
-    <div class="alert" id = "boxCt">
-        <div class="alertbox" id = "divCt">
-            <p class="aTitle">Choose Categories</p>
-        </div>
-    </div>
-
     <!--Top NavBar-->
 
     <nav>
@@ -167,48 +131,18 @@
         </div>
 
         <div class="panelList fader-in" >
-            <!-- content -->
-            <div class="container grey-text fader-in" style="margin-top: 0px; width: 100%;">
-                <div style="text-align: center;">
-                    <img id = "img" src="img/beef.png"
-                    style="width:100%;box-shadow: -1px 1px 16px 1px rgba(61, 61, 61, 0.47); height: 280px;object-fit: cover ;background-position: center; "
-                    />
-                    <textarea id ="name" class="cen big" placeholder="Name"
-                    style="font-size: 36px; color: #888;
-                    outline: none; font-weight:bold;
-                    margin-top: 20px; max-width: 80%;
-                    border-bottom: none;">
-                    </textarea>
-                    <br/>
-                    <textarea id ="des" class="cen big" multiple
-                    style="font-size: 20px;
-                    outline: none; color: #bbb; max-width:600px;
-                    border-bottom: none;" placeholder="Description of the recipe">
-                    </textarea>
-                    </br>
-                    <button class="highlight" style="color:#888; margin: auto" id = "cat"></button>
-                    </br></br>
+            <div style="width: 100%; text-align: center" >
 
-                    <hr style="width: 80%">
-                    <h3>III</h3>
-                    <h5 id = 'secIn'>What we need</h5>
-                    <br/>
-                    <div id = "ingredients-recipe" style="width:auto; ">
-                    </div>
-                    <button class="grayx" style="padding: 10px;
-                    " id ="adderin">Add Ingredients</button>
-                    <hr style="width: 80%"/>
+                <img class="cardMain"
+                     src="./img/beef.png" draggable="true" >
+                </img>
 
-                    <h3>&ltI&gt</h3>
-                    <h5 id = 'secSt'>Steps</h5>
-                    <div id = "steps-recipe" style="width:auto; padding: 20px">
-                    </div>
-                    <button class="grayx" style="padding: 10px;
-                    " id ="adderst">Add Steps</button>
-                    <hr style="width: 80%"/>
+            </div>
+            <div id = 'loading' style="display: flex; justify-content: center">
+                <img src="img/loading.gif" style="width: 60px; margin: 100px"/>
+            </div>
+            <div id = "filX" style="padding: 20px">
 
-                    <br></br>
-                </div>
             </div>
 
         </div>
@@ -218,7 +152,7 @@
             <br>
             <button class="blackx "><a href="about.html">Annex Recipes</a></button>
             <hr/>
-            <button class="blackx "  onclick="{
+            <button class="blackx " onclick="{
 
             window.location.href = 'search.html';
             }">🔎︎ Search Anything ...</button>
@@ -361,9 +295,8 @@
     <script src="./js/init.js"></script>
     <script src="./index.js"></script>
     <script src="./js/ui.js"></script>
+    <script src="./js/filter.js"></script>
     <script src="./js/db.js"></script>
-    <script src="./js/recipe.js"></script>
-
 </div>
 </body>
 </html>

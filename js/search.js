@@ -1,3 +1,9 @@
+/**
+ * @author: Zin Lin Htun
+ * @type {JavaScript}
+ */
+
+
 var bar = document.getElementById("search");
 var filter = document.getElementById("filtered");
 

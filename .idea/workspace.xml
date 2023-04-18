@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37d80160-9178-481f-be7b-ce87c76a1526" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/filter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/filter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/recipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/recipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverThread.js" beforeDir="false" afterPath="$PROJECT_DIR$/serverThread.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +41,12 @@
     <setting file="file://$PROJECT_DIR$/auth.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/contact.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/css/index.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/filter.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/js/auth.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/js/db.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/js/filter.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/js/init.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/js/recipe.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/js/search.js" root0="SKIP_INSPECTION" />
@@ -53,22 +66,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/zinli/Downloads/ig-test-js-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zinli/Downloads/ig-test-js-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zinli\WebstormProjects\AnnexFood\img" />
@@ -124,7 +137,8 @@
       <workItem from="1681086422842" duration="12665000" />
       <workItem from="1681193294886" duration="2586000" />
       <workItem from="1681225017931" duration="2571000" />
-      <workItem from="1681678652884" duration="33281000" />
+      <workItem from="1681678652884" duration="34446000" />
+      <workItem from="1681774458710" duration="3040000" />
     </task>
     <servers />
   </component>

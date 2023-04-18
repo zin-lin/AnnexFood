@@ -139,14 +139,14 @@ doc.get().then((d)=>{
     inTx.value = ingredients;
     inSt.value = steps;
 
-    name.active = false;
-    des.active = false;
+    name.disabled = true;
+    des.disabled = true;
 
     auth.onAuthStateChanged(user => {
         console.log(auth.currentUser.uid)
         if (user.uid === iid) {
-            name.active = true;
-            des.active = true;
+            name.disabled = false;
+            des.disabled = false;
             adderIn.addEventListener("click", (e) => {
                 if (auth.currentUser) {
                     boxIn.style.visibility = `visible`;
@@ -182,7 +182,13 @@ doc.get().then((d)=>{
                     let val = inTx.value;
                     ingredients = val;
                     addIngridients(ingredients);
-                    let inUpdate = ingredients.split(", ");
+                    let inUpdate = [];
+                    let inUpdatePre = ingredients.split(", ");
+                    inUpdatePre.forEach(e=> {
+                        if (e !== "")
+                            inUpdate.push(e);
+                    })
+
                     doc.update({ingredients: inUpdate}).catch(e => {
                         console.log(e)
                     });
@@ -196,7 +202,14 @@ doc.get().then((d)=>{
                     let val = inSt.value;
                     steps = val;
                     addSteps(steps);
-                    let stUpdate = steps.split('\n');
+                    let stUpdate = []
+                    let stUpdatePre = steps.split('\n');
+
+                    stUpdatePre.forEach(e=>{
+                        if (e !== "")
+                            stUpdate.push(e)
+                    })
+
                     doc.update({steps: stUpdate}).catch(e => {
                         console.log(e)
                     });
