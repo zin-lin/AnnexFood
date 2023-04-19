@@ -143,7 +143,6 @@ doc.get().then((d)=>{
     des.disabled = true;
 
     auth.onAuthStateChanged(user => {
-        console.log(auth.currentUser.uid)
         if (user.uid === iid) {
             name.disabled = false;
             des.disabled = false;
