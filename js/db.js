@@ -127,7 +127,7 @@ form.addEventListener("submit", evt=>{
         };
         db.collection("dish").add(recipe).then((doc) => {
             console.log("Added")
-            if (smth === null) {
+            if (doc === null) {
                 alert("please log in to add a new recipe");
             }
             else {
